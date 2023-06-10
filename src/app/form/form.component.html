@@ -1,0 +1,110 @@
+<div class="container">
+  <h1>Formulario de Preguntas</h1>
+  <form [formGroup]="form" (ngSubmit)="sendForm()">
+    <div class="mb-4">
+      <label for="ask1" class="form-label">1. ¿en qué medida consideras que la interpretación gráfica, numérica y textual de las estadísticas institucionales es un insumo fundamental para la toma de decisiones en la búsqueda del desarrollo y cumplimiento de la parte misional institucional?</label>
+      <select class="form-select" id="ask1" formControlName="ask1">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <div *ngIf="form.get('ask1')?.invalid && form.get('ask1')?.touched" class="text-danger">
+        {{ getMessageError('ask1') }}
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <label for="ask2" class="form-label">2. ¿en qué medida consideras que el proceso sistemático de evaluación de criterios y condiciones de calidad establecidos por el MEN a los programas académicos de la universidad, a través de la evaluación de la percepción de estudiantes, docentes, administrativos, egresados y empleadores, es efectivo y cumple con los estándares de calidad?</label>
+      <select class="form-select" id="ask2" formControlName="ask2">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+
+    <div class="mb-4">
+      <label for="ask3" class="form-label">3. ¿en qué medida consideras que como persona u organismo externo a la institución, has utilizado y valorado los servicios que la institución ofrece? </label>
+      <select class="form-select" id="ask3" formControlName="ask3">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+
+    <div class="mb-4">
+      <label for="ask4" class="form-label">4.  ¿en qué medida consideras que la gestión ha tenido impacto tanto en el logro de los resultados planificados como en el manejo de los recursos utilizados y disponibles?</label>
+      <select class="form-select" id="ask4" formControlName="ask4">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+
+    <div class="mb-4">
+      <label for="ask5" class="form-label">5. ¿en qué medida consideras que el instrumento de medición utilizado ha permitido identificar y registrar el grado de satisfacción de los clientes y/o partes interesadas de los servicios de la universidad y los clientes internos de los procesos?</label>
+      <select class="form-select" id="ask5" formControlName="ask5">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+
+    <div class="mb-4">
+      <label for="ask6" class="form-label">6.  ¿en qué medida consideras que el documento elaborado ha logrado comunicar información de manera efectiva a un nivel más alto en la Institución?</label>
+      <select class="form-select" id="ask6" formControlName="ask6">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+
+    <div class="mb-4">
+      <label for="ask7" class="form-label">7.  ¿en qué medida consideras que el mecanismo de evaluación y comparación utilizado ha permitido conocer los resultados alcanzados de acuerdo a los criterios definidos, con el objetivo de alcanzar la mejora continua? </label>
+      <select class="form-select" id="ask7" formControlName="ask7">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+
+    <div class="mb-4">
+      <label for="ask8" class="form-label">8. ¿en qué medida consideras que esta forma de evaluación de valor añadido ofrece una mejor comprensión de las interacciones de la institución con los clientes? </label>
+      <select class="form-select" id="ask8" formControlName="ask8">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+
+    <div class="mb-4">
+      <label for="ask9" class="form-label">9. ¿en qué medida consideras que la percepción del cliente sobre el grado en que se han cumplido sus requisitos y expectativas ha sido satisfactoria? </label>
+      <select class="form-select" id="ask9" formControlName="ask9">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+
+    <div class="d-grid gap-2">
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </div>
+  </form>
+</div>
